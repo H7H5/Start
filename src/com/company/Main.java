@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Main extends JPanel { //наследуемся от класса JPanel
 
     public static final int WIDTH = 1280;
-    public static final int HEIGHT =720;
+    public static final int HEIGHT =510;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Гонки");   //создаем объект frame
@@ -17,3 +17,6 @@ public class Main extends JPanel { //наследуемся от класса JP
         frame.setVisible(true);                   // делаем фрейм видимым
     }
 }
+
+
+
