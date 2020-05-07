@@ -18,20 +18,22 @@ public class Space extends JPanel implements ActionListener {
     Luke luke = new Luke();
     Timer timer = new Timer(20,this);
     public Space() {
+        addKeyListener(new Control(hero));
         setFocusable(true);
         timer.start();
     }
 
     public void update()
     {
-        roadX =  roadX - 5;
-        roadX2 =  roadX2 - 5;
+        hero.update();
+        roadX =  roadX - hero.speed;
+        roadX2 =  roadX2 - hero.speed;
         if(roadX2<0)
         {
             roadX =  0;
             roadX2 =  1280;
         }
-        luke.update();
+        luke.update(hero.speed);
     }
 
     @Override

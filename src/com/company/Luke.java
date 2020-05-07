@@ -11,9 +11,9 @@ public class Luke {
     public int x = 0;
     public int y = 0;
     public Image img = new ImageIcon("res/Luke200x200.png").getImage();// агружает картинку в класс
-    public void update()
+    public void update(int heroSpeed)
     {
-        x = x - 5;
+        x = x - heroSpeed;
         if(x < -150)
         {
             x = 1400;
