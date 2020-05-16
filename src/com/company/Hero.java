@@ -8,13 +8,13 @@ import java.awt.event.KeyEvent;
  * Created by admin on 21.04.2020.
  */
 public class Hero {
-    public int x = 70;
-    public int y = 300;
-    public int speed = 2;
-    public int distanse = 0;
-    public int acceleration = 0;
-    public int biasY = 0;
-    public int maxSpeed = 50;
+    public int x = 70;             // координата x
+    public int y = 300;            // координата y
+    public int speed = 2;          // скорость героя
+    public int distanse = 0;       // дистанция которую ми проехали
+    public int acceleration = 0;   // ускорение
+    public int biasY = 0;          // смещение по вертикале
+    public int maxSpeed = 50;      // максимальная скорость
 
     public Image img = new ImageIcon("res/car1.png").getImage();// агружает картинку в класс
 
@@ -24,7 +24,7 @@ public class Hero {
     }
     public void update()
     {
-        speed = speed + acceleration;
+        speed = speed + acceleration; // передвигаем по оси x
         if (speed<=0)
         {
             speed = 0;
@@ -34,7 +34,7 @@ public class Hero {
             speed = maxSpeed;
         }
         if(speed>0) {
-            y = y - biasY;
+            y = y - biasY;     //передвигаем по оси y
 
         }
         if (y<5)
