@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Space extends JPanel implements ActionListener {
     int countCar =0;
     int roadX = 0;
-    int roadX2 =1280;
+    int roadX2 = 1280;
     public Image img = new ImageIcon("res/road.png").getImage();// агружает картинку в класс
     public Image img2 = new ImageIcon("res/road.png").getImage();// агружает картинку в класс
     Hero hero = new Hero();                      //создаем героя
@@ -35,8 +35,8 @@ public class Space extends JPanel implements ActionListener {
         roadX2 =  roadX2 - hero.speed;
         if(roadX2<0)
         {
-            roadX =  0;
-            roadX2 =  1280;
+            roadX = 0;
+            roadX2 = 1280;
         }
         luke.update(hero.speed);
         for (int i =0; i<rivals.size();i++){
