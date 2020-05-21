@@ -11,6 +11,7 @@ public class Rival {
     public int x = 500;
     public int y = 200;
     public int speed = 10;
+    int line;
     public Image img;
     public Image img0 = new ImageIcon("res/car1.png").getImage();
     public Image img1 = new ImageIcon("res/car2.png").getImage();
@@ -18,10 +19,11 @@ public class Rival {
     public Image img3 = new ImageIcon("res/car4.png").getImage();
     public Image img4 = new ImageIcon("res/car5.png").getImage();
     public Image img5 = new ImageIcon("res/car6.png").getImage();
-
-    public Rival(int x, int y, int speed) {
+    public int []arrY = {10,80,160,240,320,400};
+    public Rival(int x, int line, int speed) {
         this.x = x;
-        this.y = y;
+        this.line = line;
+        y = arrY[line];
         this.speed = speed;
         Random random = new Random();
         int im = random.nextInt(6);

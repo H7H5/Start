@@ -17,8 +17,19 @@ public class RivalsFactory extends Thread {
         while (true){
             Random random = new Random();
             try {
-                Thread.sleep(random.nextInt(1000));
-                rivals.add(new Rival(1700,random.nextInt(400),random.nextInt(30))); // создаем очередного соперника и помещаем его в общюю коллекцию
+                Thread.sleep(random.nextInt(500));
+                int xRival = 1700;
+                int line = random.nextInt(6);
+                int speed = random.nextInt(30);
+                boolean valid = true;
+                for (int i =0; i < rivals.size();i++){
+                    if(rivals.get(i).line == line){
+                        valid = false;
+                    }
+                }
+                if(valid == true){
+                    rivals.add(new Rival(xRival,line,speed));
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

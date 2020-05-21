@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * Created by admin on 14.04.2020.
  */
 public class Space extends JPanel implements ActionListener {
+    int countCar = 0;
     int roadX = 0;
     int roadX2 = 1280;
     public Image img = new ImageIcon("res/road.png").getImage();// агружает картинку в класс
@@ -41,7 +42,7 @@ public class Space extends JPanel implements ActionListener {
         for (int i =0; i<rivals.size();i++){
             rivals.get(i).update(hero.speed);
         }
-
+        rivalRemove();
     }
 
     @Override
@@ -59,5 +60,24 @@ public class Space extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         update();
         repaint();
+    }
+    private void rivalRemove(){
+        boolean flag = false;
+        for(int i = 0 ; i < rivals.size();i++){
+            if(rivals.get(i).x>3000){
+                rivals.remove(i);
+                flag = true;
+                break;
+            }
+            if(rivals.get(i).x<-500){
+                rivals.remove(i);
+                flag = true;
+                countCar++;
+                break;
+            }
+        }
+        if(flag == true){
+            rivalRemove();
+        }
     }
 }
