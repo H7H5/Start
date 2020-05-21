@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Space extends JPanel implements ActionListener {
     int countCar = 0;
     int roadX = 0;
-    int roadX2 = 1280;
+    int roadX2 =1280;
     public Image img = new ImageIcon("res/road.png").getImage();// агружает картинку в класс
     public Image img2 = new ImageIcon("res/road.png").getImage();// агружает картинку в класс
     Hero hero = new Hero();                      //создаем героя
