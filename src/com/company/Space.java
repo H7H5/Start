@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * Created by admin on 14.04.2020.
  */
 public class Space extends JPanel implements ActionListener {
-    int countCar = 0;
+    int countCar =0;
     int roadX = 0;
     int roadX2 = 1280;
     public Image img = new ImageIcon("res/road.png").getImage();// агружает картинку в класс
