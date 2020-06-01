@@ -45,7 +45,7 @@ public class Hero {
         {
             y = 410;
         }
-
+        distanse = distanse + speed;
     }
 
     public void  keyPressed(KeyEvent keyEvent)
@@ -80,6 +80,10 @@ public class Hero {
         if(key == KeyEvent.VK_DOWN){
             biasY = 0;
         }
+    }
+    public  Rectangle getRectangle (){
+        Rectangle rectangle = new Rectangle(x+10,y+10,img.getWidth(null)/2-20,img.getHeight(null)/2-20);
+        return rectangle;
     }
 }
 

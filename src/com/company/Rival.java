@@ -57,6 +57,10 @@ public class Rival {
     {
         x = x + speed - heroSpeed; // двигаем соперника
     }
+    public  Rectangle getRectangle (){
+        Rectangle rectangle = new Rectangle(x+10,y+10,img.getWidth(null)/2-20,img.getHeight(null)/2-20);
+        return rectangle;
+    }
 
 
 }
